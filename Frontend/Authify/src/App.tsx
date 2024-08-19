@@ -5,12 +5,12 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Profile from "./pages/Profile"
 import About from "./pages/About"
-import Navbar from "./components/Navbar"
+// import Navbar from "./components/Navbar"
 function App() {
   return (
     <div className="app">
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
