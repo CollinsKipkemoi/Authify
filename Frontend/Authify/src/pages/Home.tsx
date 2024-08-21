@@ -1,6 +1,14 @@
+import Navbar from "../components/Navbar"
+import "../App.css"
 function Home() {
   return (
-    <div>Home</div>
+    <>
+      <Navbar />
+      <div className="home">
+        <h1>Home</h1>
+        <p>Welcome to the Home page</p>
+      </div>
+    </>
   )
 }
 

@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 function Register() {
   const [formData, setFormData] = useState({})
   const [error, setError] = useState({ error: false, message: "" })
+  const navigate = useNavigate()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -29,7 +30,7 @@ function Register() {
         return
       }
       // Redirect to login page
-      window.location.href = "/login"
+      navigate("/login")
     } catch (error) {
       setError({ error: true, message: "An error occurred" })
       console.error(error)
